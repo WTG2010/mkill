@@ -1,0 +1,30 @@
+server:
+  port: 5566
+spring:
+  application:
+    name: server-kill
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/mkill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    password: root
+    username: 123
+  jpa:
+   hibernate:
+      ddl-auto: update
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5673
+    username: guest
+    password: guest
+    virtual-host: /
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    timeout: 3000ms
+    jedis:
+      pool:
+        max-active: 10
+        max-wait: 30000
+        max-idle: 10
+    
